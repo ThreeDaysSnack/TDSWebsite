@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three Days Snack </title>
+    <title>Three Days Snack</title>
     <style>
         /* General Styles */
         body {
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column; /* Stacks content and footer vertically */
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh; /* Changed from height to min-height */
             background-color: #0f0f0f; /* Dark background */
             color: #ffffff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -22,15 +23,19 @@
         .container {
             max-width: 600px;
             padding: 20px;
+            flex-grow: 1; /* Pushes the footer to the bottom */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         /* Logo Styling */
         .logo {
-            width: 200px; /* Adjust size as needed */
+            width: 200px; 
             height: auto;
             margin-bottom: 30px;
-            /* Optional: subtle glow effect */
             filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+            align-self: center;
         }
 
         /* Text Styling */
@@ -41,7 +46,7 @@
             text-transform: uppercase;
         }
 
-                h2 {
+        h2 {
             font-size: 1.5rem;
             letter-spacing: 2px;
             margin-bottom: 10px;
@@ -54,7 +59,33 @@
             margin-top: 20px;
         }
 
-        /* Simple animation for the "Coming Soon" text */
+        /* Footer Styling */
+        footer {
+            width: 100%;
+            padding-bottom: 20px;
+        }
+
+        hr {
+            width: 80%;
+            border: 0;
+            height: 1px;
+            background: #333; /* Subtle line color */
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        /* Animation */
         .pulse {
             animation: pulse-animation 2s infinite;
         }
@@ -75,6 +106,14 @@
         <h2>A mobile game studio</h2>
         <p class="pulse">COMING SOON ...</p>
     </div>
+
+    <footer>
+        <hr>
+        <div class="footer-links">
+            <a href="terms.html">Terms and Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+    </footer>
 
 </body>
 </html>
