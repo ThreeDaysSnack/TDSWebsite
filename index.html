@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Three Days Snack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         /* General Styles */
         body {
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column; /* Stacks content and footer vertically */
+            flex-direction: column; 
             justify-content: center;
             align-items: center;
-            min-height: 100vh; /* Changed from height to min-height */
-            background-color: #0f0f0f; /* Dark background */
+            min-height: 100vh; 
+            background-color: #0f0f0f; 
             color: #ffffff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
@@ -23,7 +24,7 @@
         .container {
             max-width: 600px;
             padding: 20px;
-            flex-grow: 1; /* Pushes the footer to the bottom */
+            flex-grow: 1; 
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -62,15 +63,32 @@
         /* Footer Styling */
         footer {
             width: 100%;
-            padding-bottom: 20px;
+            padding-bottom: 30px;
         }
 
         hr {
             width: 80%;
             border: 0;
             height: 1px;
-            background: #333; /* Subtle line color */
+            background: #333; 
             margin-bottom: 20px;
+        }
+
+        .social-icons {
+            margin-bottom: 15px;
+        }
+
+        .social-icons a {
+            color: #888;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: color 0.3s, transform 0.3s;
+            display: inline-block;
+        }
+
+        .social-icons a:hover {
+            color: #ffffff;
+            transform: translateY(-3px);
         }
 
         .footer-links a {
@@ -109,6 +127,15 @@
 
     <footer>
         <hr>
+        <div class="social-icons">
+            <a href="https://x.com/ThreeDaysSnack" target="_blank" aria-label="X (Twitter)">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/threedayssnack" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+        
         <div class="footer-links">
             <a href="terms.html">Terms and Service</a>
             <a href="privacy.html">Privacy Policy</a>
